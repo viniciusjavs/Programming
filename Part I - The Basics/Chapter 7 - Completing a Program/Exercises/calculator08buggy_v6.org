@@ -1,0 +1,56 @@
+Simple calculator
+
+Revision history:
+
+	 Revised by Vinicius Sa January 2017
+	 Revised by Bjarne Stroustrup November 2013
+	 Revised by Bjarne Stroustrup May 2007
+	 Revised by Bjarne Stroustrup August 2006
+	 Revised by Bjarne Stroustrup August 2004
+	 Originaly written by Bjarne Stroustrup
+	 	   (bs@cs.tamu.edu) Spring 2004.
+
+This progrm implements a basic expression calculator.
+Input from cin; output to cout.
+The grammar for input is:
+
+Calculation:
+	Statement
+	Print
+	Quit
+	Help
+	Calculation Statement
+Statement:
+	Declaration
+	Assignment
+	Expression
+Declaration:
+	"let" Name "=" Expression
+Assignment:
+	Name "=" Expression
+Print:
+	;
+Quit:
+	q
+Expression:
+	Term
+	Expression + Term
+	Expression - Term
+Term:
+	Primary
+	Term * Primary
+	Term / Primary
+	Term % Primary
+Primary:
+	Number
+	(Expression)
+	- Primary
+	+ Primary
+	sqrt(Primary)
+	pow(Primary, Primary)
+Number:
+	floatin-point-literal
+
+
+Input comes from cin through the Token_stream called ts.
+	 

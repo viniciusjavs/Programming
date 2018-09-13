@@ -1,0 +1,19 @@
+English Grammar
+--
+Sentence:
+	Article Noun Verb		// e.g., The C++ rules
+	Sentence Conjuntion Sentence	// e.g., The Birds fly but the fish swim
+Conjuntion:
+	"and"
+	"or"
+	"but"
+Article:
+	"the"
+Noun:
+	"birds"
+	"fish"
+	"C++"
+Verb:
+	"rules"
+	"fly"
+	"swim"

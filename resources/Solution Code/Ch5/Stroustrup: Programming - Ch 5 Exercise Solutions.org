@@ -1,0 +1,21 @@
+
+  Programming - Ch 5 Exercise Solutions
+
+Modified January 17, 2010.
+
+  * *Exercise 7*: Write a quadratic equation solver
+
+    Solution code
+    <http://www.stroustrup.com/Programming/Solutions/Ch5/e5-7.cpp>.
+
+  * *Exercise 8*: Sum part of a sequence
+
+    Solution code
+    <http://www.stroustrup.com/Programming/Solutions/Ch5/e5-8.cpp>.
+
+  * *Exercise 11*: Write out Fibonacci numbers. Find the largest
+    Fibonacci number that fits in an int
+
+    Solution code
+    <http://www.stroustrup.com/Programming/Solutions/Ch5/e5-10.cpp>.
+

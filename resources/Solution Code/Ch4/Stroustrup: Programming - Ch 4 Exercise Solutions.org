@@ -1,0 +1,69 @@
+
+  Programming - Ch 4 Exercise Solutions
+
+Modified January 17, 2010.
+
+  * *Exercise 3*: Read a sequence of doubles into a vector. Think of
+    each value as the distance between two cities along a given route.
+    Compute and print the total distance (the sum of all distances).
+    Find and print the smallest and greatest distance between two
+    neighboring cities. Find and print the mean distance between two
+    neighboring cities.
+
+    Solution code
+    <http://www.stroustrup.com/Programming/Solutions/Ch4/e4-3.cpp>.
+
+  * *Exercise 5*: Write a program that performs as a very simple
+    calculator. Your calculator should be able to handle the five basic
+    math operations: add, subtract, multiply, and divide on two input
+    values. Your program should prompt the user to enter three
+    arguments: two *double* values and a character to represent an
+    operation. If the entry arguments are *35.6*, *24.1*, and *+*; the
+    program output should be *"The sum of 35.6 and 24.1 is 59.7."* In
+    chapter 6, we look at a much more sophisticated simple calculator.
+
+    Solution code
+    <http://www.stroustrup.com/Programming/Solutions/Ch4/e4-5.cpp>.
+
+  * *Exercise 6*: Make a *vector* holding the ten *string* values
+    *"zero"*, *"one"*, .. *"nine"*. Use that in a program that converts
+    a digit to its corresponding spelled out value; e.g., the input *7*
+    gives the output *seven*. Have the same program, using the same
+    input loop, convert spelled out numbers into their digit form; e.g.,
+    the input *seven* gives the output *7*.
+
+    See Exercise 7.
+
+  * *Exercise 7*: Modify the ``mini calculator'' from exercise 5 to
+    accept (just) single-digit numbers written as either digits or
+    spelled out.
+
+    Solution code
+    <http://www.stroustrup.com/Programming/Solutions/Ch4/e4-7.cpp>.
+
+  * *Exercise 10*: Write a program that plays the game "Rock, paper,
+    scissors." If you are not familiar with the game do some research
+    (e.g. on the web using Google). Research is a common task for
+    programmers. Use a switch statement to solve this exercise. Also,
+    the machine should give random answers (i.e., select the next Rock,
+    paper, or scissors randomly). Real randomness is too hard to provide
+    just now, so just build a vector with a sequence of values to be
+    used as "the next value." If you build the vector into the program,
+    it will always play the same game, so maybe you should let the user
+    enter some values). Try variations to make it less easy for the user
+    to guess which move the machine will do next.
+
+    Solution code
+    <http://www.stroustrup.com/Programming/Solutions/Ch4/e4-10.cpp>.
+
+  * *Exercise 11*: Compute the prime numbers between 1 and 100. See the
+    book for details.
+
+    Solution code
+    <http://www.stroustrup.com/Programming/Solutions/Ch4/e4-11.cpp>.
+
+  * *Exercise 19*: read and write (name,value) pairs
+
+    Solution code
+    <http://www.stroustrup.com/Programming/Solutions/Ch4/e4-19.cpp>.
+

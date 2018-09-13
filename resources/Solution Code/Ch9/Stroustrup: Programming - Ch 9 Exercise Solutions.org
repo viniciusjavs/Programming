@@ -1,0 +1,20 @@
+
+  Programming - Ch 9 Exercise Solutions
+
+Modified January 16, 2010.
+
+  * *Exercise 10*: Implement leapyear()
+
+    Solution code
+    <http://www.stroustrup.com/Programming/Solutions/Ch9/e9-10.cpp>.
+
+  * *Exercise 11*: Provide helper functions for Date.
+
+    Solution code
+    <http://www.stroustrup.com/Programming/Solutions/Ch9/e9-11.cpp>.
+
+  * *Exercise 13*: Design, implement, and test a rational number class
+
+    Solution code
+    <http://www.stroustrup.com/Programming/Solutions/Ch9/e9-13.cpp>.
+

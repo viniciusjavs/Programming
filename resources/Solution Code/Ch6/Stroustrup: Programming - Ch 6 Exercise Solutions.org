@@ -1,0 +1,27 @@
+
+  Programming - Ch 6 Exercise Solutions
+
+Modified January 15, 2010.
+
+  * *Exercise 4*: Read and write (name,value) pairs
+
+    Solution code
+    <http://www.stroustrup.com/Programming/Solutions/Ch6/e6-4.cpp>.
+
+  * *Exercise 6*: Parse simple "English" grammar
+
+    Solution code
+    <http://www.stroustrup.com/Programming/Solutions/Ch6/e6-6.cpp>.
+
+  * *Exercise 9*: Compose integers out of characters: 123 is 1 hundered
+    2 tens and 3 ones
+
+    Solution code
+    <http://www.stroustrup.com/Programming/Solutions/Ch6/e6-9.cpp>.
+
+  * *Exercise 10*: Calculate number of permutations and combinations
+    (very verbose problem definition)
+
+    Solution code
+    <http://www.stroustrup.com/Programming/Solutions/Ch6/e6-10.cpp>.
+

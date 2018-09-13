@@ -1,0 +1,10 @@
+
+  Programming - Ch 7 Exercise Solutions
+
+Modified April 25, 2009.
+
+  * *Exercise 1, 2, and 3*: Improve the calculator.
+
+    Solution code
+    <http://www.stroustrup.com/Programming/Solutions/Ch7/e7-1.cpp>.
+

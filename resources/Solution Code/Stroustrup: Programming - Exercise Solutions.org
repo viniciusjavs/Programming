@@ -1,0 +1,6 @@
+* My ideals for solutions are:
+** Every program (unless stated otherwise) either produces a correct result or gives a reasonably clear error message.
+** No solution gratuitously violates the rules for good programming and design style promoted by the book (even though early solutions obviously can't use significant features only introduced in later chapters).
+** A solution does not use facilities not yet presented in the book.
+** Every program is reasonably (but not verbosely) commented with comments appropriate for somone who has read the book thus far.
+** Significant design choices are explicitly (if briefly) decribed. 

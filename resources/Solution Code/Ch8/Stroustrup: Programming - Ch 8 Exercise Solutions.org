@@ -1,0 +1,29 @@
+
+  Programming - Ch 8 Exercise Solutions
+
+Modified January 17, 2010.
+
+  * *Exercises 2 and 3*: Print out vector; generate fibonacci sequences
+
+    Solution code
+    <http://www.stroustrup.com/Programming/Solutions/Ch8/e8-2.cpp>.
+
+  * *Exercise 5*: Reverse sequences of integers
+
+    Solution code
+    <http://www.stroustrup.com/Programming/Solutions/Ch8/e8-5.cpp>.
+
+  * *Exercise 7*: Read, write, and sort (name,value) pairs
+
+    Solution code
+    <http://www.stroustrup.com/Programming/Solutions/Ch8/e8-7.cpp>.
+
+  * *Exercise 14*: Write a function that takes a vectorargument and
+    returns a vectorcontaining the number of characters in each string.
+    Also find the longest and shortest string and the lexicographically
+    first and last string. How many separate functions would you use for
+    these tasks? Why?
+
+    Solution code
+    <http://www.stroustrup.com/Programming/Solutions/Ch8/e8-14.cpp>.
+

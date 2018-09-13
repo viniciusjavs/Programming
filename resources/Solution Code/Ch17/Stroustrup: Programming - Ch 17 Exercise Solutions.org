@@ -1,0 +1,34 @@
+
+  Programming - Ch 17 Exercise Solutions
+
+Modified March 24, 2009.
+
+  * *Exercise 1*: What is the output format of pointer values on your
+    implementation? Hint: Don't read the documentation.
+
+    Solution code
+    <http://www.stroustrup.com/Programming/Solutions/Ch17/e17-1.cpp>.
+
+  * *Exercise 2*: How many bytes are there in an *int*? In a *double*?
+    In a *bool*? Do not use sizeof except to verify your answer.
+
+    Solution code
+    <http://www.stroustrup.com/Programming/Solutions/Ch17/e17-2.cpp>.
+
+  * *Exercise 3*: Write a function, *void to_lower(char* s)*, that
+    replaces all upper case characters in the C-style string *s* with
+    their lower case equivalent. For example *"Hello, World!"* becomes
+    *"hello, world!"* Do not use any standard library functions. A
+    C-style string is a zero-terminated array of characters, so that if
+    you find a *char* with the value *0* you are at the end.
+
+    Solution code
+    <http://www.stroustrup.com/Programming/Solutions/Ch17/e17-3.cpp>.
+
+  * *Exercise 4*: Write a function, *char* strdup(const char*)*, that
+    copies a C-style string into memory it allocates on the free store.
+    Do not use any standard library functions.
+
+    Solution code
+    <http://www.stroustrup.com/Programming/Solutions/Ch17/e17-4.cpp>.
+

@@ -1,0 +1,31 @@
+
+  Programming - Ch 10 Exercise Solutions
+
+Modified January 17, 2010.
+
+  * *Exercise 9*: Merge two sorted files; that is the files are ordered
+    so that *word[i]in each input file, now copy from the two files so
+    that *word[i]in the resulting output file,
+
+    Solution code
+    <http://www.stroustrup.com/Programming/Solutions/Ch10/e10-9.cpp>.
+
+    **
+  * ***Exercise 11*: produce a sum of all whitespace-separated integers
+    in a text fine. For example *bears: 17 elephants 9 end* should
+    output *26*.
+
+    Solution code
+    <http://www.stroustrup.com/Programming/Solutions/Ch10/e10-11.cpp>.
+
+    **
+  * ***Exercise 12*: Write a program that given a file name and a word
+    outputs each line that contains that word together with the line
+    number. Hint: *getline()*.
+
+    Solution code
+    <http://www.stroustrup.com/Programming/Solutions/Ch10/e10-12.cpp>.
+
+    **
+
+****
