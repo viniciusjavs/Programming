@@ -104,13 +104,13 @@ struct String : std::string {
 
 	char& operator[](unsigned int i) // rather than return at(i);
 	{
-		if (i<0||size()<=i) throw Range_error(i);
+	        if (size()<=i) throw Range_error(i);
 		return std::string::operator[](i);
 	}
 
 	const char& operator[](unsigned int i) const
 	{
-		if (i<0||size()<=i) throw Range_error(i);
+	        if (size()<=i) throw Range_error(i);
 		return std::string::operator[](i);
 	}
 };
@@ -211,6 +211,8 @@ template<class R, class A> R narrow_cast(const A& a)
 
 
 inline int randint(int min, int max) { static default_random_engine ran; return uniform_int_distribution<>{min, max}(ran); }
+
+inline void seed_randint(int seed) { default_random_engine engine(seed); }
 
 inline int randint(int max) { return randint(0, max); }
 
