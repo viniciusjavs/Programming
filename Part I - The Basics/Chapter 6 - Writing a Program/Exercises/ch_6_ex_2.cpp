@@ -6,7 +6,7 @@
 /*
   Second version of the calculator program.
   File: calculator01.cpp a.k.a calculator02buggy.cpp
-  Add ability to use {} as well as ();
+  Add: ability to use {} as well as ();
  */
 
 #include "std_lib_facilities.h"
@@ -18,9 +18,9 @@ public:
     char kind;        // what kind of token
     double value;     // for numbers: a value 
     Token(char ch)    // make a Token from a char
-        :kind(ch), value(0) { }    
+        :kind{ch}, value{0} { }    
     Token(char ch, double val)     // make a Token from a char and a double
-        :kind(ch), value(val) { }
+        :kind{ch}, value{val} { }
 };
 
 //------------------------------------------------------------------------------
@@ -54,7 +54,7 @@ Token Token_stream::get()
 {
     if (full) {       // do we already have a Token ready?
         // remove token from buffer
-        full=false;
+        full = false;
         return buffer;
     } 
 
@@ -62,19 +62,33 @@ Token Token_stream::get()
     cin >> ch;    // note that >> skips whitespace (space, newline, tab, etc.)
 
     switch (ch) {
-    case '=':    // for "print"
-    case 'x':    // for "quit"
-    case '(': case ')': case '{': case '}': case '+': case '-': case '*': case '/': 
-        return Token{ch};        // let each character represent itself
+    case '=': // for "print"
+    case 'x': // for "quit"
+    case '(':
+    case ')':
+    case '{':
+    case '}':
+    case '+':
+    case '-':
+    case '*':
+    case '/':
+        return Token{ch}; // let each character represent itself
     case '.':
-    case '0': case '1': case '2': case '3': case '4':
-    case '5': case '6': case '8': case '7': case '9':
-        {    
-            cin.putback(ch);         // put digit back into the input stream
-            double val;
-            cin >> val;              // read a floating-point number
-            return Token{'8',val};   // let '8' represent "a number"
-        }
+    case '0':
+    case '1':
+    case '2':
+    case '3':
+    case '4':
+    case '5':
+    case '6':
+    case '8':
+    case '7':
+    case '9': {
+        cin.putback(ch); // put digit back into the input stream
+        double val;
+        cin >> val;             // read a floating-point number
+        return Token{'8', val}; // let '8' represent "a number"
+    }
     default:
         error("Bad token");
     }

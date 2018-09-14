@@ -1,6 +1,7 @@
 // Copyright (C) 2017 Vinicius Sa
 // Author: Vinicius Sa <viniciusjavs@gmail.com>
 // Timestamp: 11 Jan 2017
+// Chapter 5, Exercise 14
 
 /*
   Program that reads "day-of-the-week, value" pairs and print the values of each

@@ -1,8 +1,10 @@
 // Copyright (C) 2017 Vinicius Sa
 // Author: Vinicius Sa <viniciusjavs@gmail.com>
 // Timestamp: 18 Jan 2017
+// Chapter Six, Exercise 10
 
 /*
+  Program that calculates permutations and combinations
  */
 
 #include "std_lib_facilities.h"
@@ -19,13 +21,15 @@ unsigned long factorial(int x)
 
 int permutation(int a, int b)
 {
-    if (a<b || a<1 || b<1)
+    if (a<b || a<1 || b<1) // double checks
 	error("Bad input", "permutation");
     return factorial(a) / factorial(a-b);
 }
 
 int combination(int a, int b)
 {
+    if (a<b || a<1 || b<1) // double checks
+	error("Bad input", "combination");
     return permutation(a, b) / factorial(b);
 }
 

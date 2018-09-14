@@ -7,10 +7,9 @@
   Rework of the exercise 19 in Chapter 4, using a class Name_value and a vector
   <Name_value> instead of two vectors.
   Chapter 4, Exercise 19:
-  Program that reads a set of name-and-value pairs
-  then checks that each name is unique. Writes out
-  all (name, value) pairs or a error message if a
-  name is entered twice.
+  Program that reads a set of name-and-value pairs then checks that each name is
+  unique. Writes out all (name, value) pairs or a error message if a  name is
+  entered twice.
  */
 
 #include "std_lib_facilities.h"
@@ -23,14 +22,17 @@ class Name_value {
 
 bool has_twice(vector<Name_value>);
 
-int main() try {
+int main()
+try {
     vector<Name_value> pairs;
     cout << "Enter a set of name-and-value pairs: \n";
     Name_value pair;
     cin >> pair.name >> pair.score;
+
     while (pair.name != "NoName" || pair.score != 0) {
         pairs.push_back(pair);
         cin >> pair.name >> pair.score;
+        if (!cin) error("Bad input!");
     }
     if (!has_twice(pairs))
         for (auto pair : pairs)

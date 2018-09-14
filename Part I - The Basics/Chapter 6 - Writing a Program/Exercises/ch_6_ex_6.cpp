@@ -19,6 +19,9 @@ vector<string> stop = {"."};
 vector<string> conjunct = {"and", "or", "but"};
 
 bool in(string str, vector<string> strings)
+/*
+  Checks if str is in vector
+*/
 {
    for (auto s : strings)
 	if (str == s) return true;

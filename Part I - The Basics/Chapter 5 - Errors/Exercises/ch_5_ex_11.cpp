@@ -10,15 +10,15 @@
 
 int main()
 {
-    try {
-	long a = 1, b = 1;
-	cout << "( " << a << " " << b;
-	while(true) {
-	    int n = narrow_cast<int>(a+b);
-	    cout << " " << n;
-	    a = b;
-	    b = n;
-	}
-    } catch (...){}
+    long a = 1, b = 1;
+    cout << "( " << a << " " << b;
+    int n;
+    while (true) {
+	try { n = narrow_cast<int>(a + b); }
+	catch (runtime_error& e) { break; }
+        cout << " " << n;
+        a = b;
+        b = n;
+    }
     cout << " )" << '\n';
 }

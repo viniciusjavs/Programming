@@ -1,8 +1,11 @@
 // Copyright (C) 2017 Vinicius Sa
 // Author: Vinicius Sa <viniciusjavs@gmail.com>
 // Timestamp: 17 Jan 2017
+// Chapter 6, Exercise 9
 
 /*
+  Program that reads digits and composes them into integers and then prints the
+  number in full.
  */
 
 #include "std_lib_facilities.h"

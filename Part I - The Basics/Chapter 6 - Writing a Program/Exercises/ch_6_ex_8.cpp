@@ -4,43 +4,11 @@
 // Chapter 6, Exercise 8
 
 /*
-  Re-implementation of the little guessing game called "Bulls and Cows", using
-  four letters rather than four digits
+  Re-implementation of the little guessing game called "Bulls and Cows" (Chapter
+  5, Exercise 12/13), using four letters rather than four digits
  */
 
 #include "std_lib_facilities.h"
-
-int fib()
-/*
-  Returns the next element of the Fibbonacci series
- */
-{
-    static int a = 1;
-    static int b = 1;
-    int n = a + b;
-    if (b < a) n = 1; // overflow
-    a = b;
-    b = n;
-    return n;
-}
-
-void initialize(const int seed)
-/*
-  Use the seed to initialize the Fibbonacci series
- */
-{
-    for (int i = 0; i < abs(seed) % 9; ++i) // [1..8]
-        fib();
-}
-
-int gen_number()
-/*
-  Generates a non predictable number between a specific range
- */
-{
-    constexpr int range_limit = 26; // [0..25]
-    return fib() % range_limit + 97; // alphabet ascii
-}
 
 bool in_vector(char letter, vector<char> v)
 /*
@@ -48,28 +16,54 @@ bool in_vector(char letter, vector<char> v)
  */
 {
     for (auto l : v)
-        if (letter == l)
-            return true;
+        if (letter == l) return true;
     return false;
 }
 
-void check_input (string str)
+vector<char> str_to_v(const string str)
 /*
+  Receives a string and returns a vector with each character of this string
   Check if input string match with the games rules
 */
 {
+    for (auto c : str)
+        if (c < 'a' || c > 'z')
+            error("Bad input for \"guess\"", " - illegal characters");
+    
     int size = 4;
-    const int number = str.size();
-    if (number != size)
-	error("Bad input for \"guess\"", " - so may letters");
-
-    for (unsigned int i = 0; i < str.size() - 1; ++i)
-        for (unsigned int j = i + 1; j < str.size(); ++j)
-            if (str[i] == str[j])
-                throw logic_error("Repeated number!");
+    if (str.size() != size)
+        error("Bad input for \"guess\"", " - out of change letters");
+    
+    vector<char> guess;
+    for (auto c : str)
+	if (in_vector(c, guess))
+            throw logic_error("Repeated number!");
+	else
+	    guess.push_back(c);
+    return guess;
 }
 
-int get_bulls(const string  guess, const vector<char> secret)
+vector<char> set_string()
+/*
+  Function that read "string" from user input.
+  Wrapper for function str_to_v() that handles repeated numbers.
+ */
+{
+    string str;
+    cin >> str;
+    if (!cin) error("Bad input for \"guess\"");
+    vector<char> guess;
+    try {
+        guess = str_to_v(str);
+    }
+    catch (logic_error &e) {
+        cerr << "Error: " << e.what() << '\n' << "Try again: ";
+        guess = set_string();
+    }
+    return guess;
+}
+
+int get_bulls(const vector<char> guess, const vector<char> secret)
 /*
   Returns the number of matching numbers by position
  */
@@ -81,7 +75,7 @@ int get_bulls(const string  guess, const vector<char> secret)
     return bulls;
 }
 
-int get_cows(const string guess, const vector<char> secret)
+int get_cows(const vector<char> guess, const vector<char> secret)
 /*
   Returns the number of matching numbers between vectors
  */
@@ -95,56 +89,48 @@ int get_cows(const string guess, const vector<char> secret)
 }
 
 int main()
-{
-    try {
-        int seed;
-        cout << "\"Bulls and Cows\" Game!\n"
-             << "Please enter a integer \"seed\" to generate game randomness: "
-                "\n";
-        cin >> seed;
-        if (!cin)
-            error("Bad input for \"seed\"");
-        initialize(seed);
-        // generate secret
-        vector<char> secret;
-        secret.push_back(gen_number());
-        constexpr int size = 4;
-        for (int i = 0; i < size - 1; ++i) {
-            int digit = gen_number();
-            while (in_vector(digit, secret))
-                digit = gen_number();
-            secret.push_back(digit);
-        }
-	
-        cout << "Enter your guess, a string of " << size
-             << " distinct letters: \n";
-	string str;
-	cin >> str;
-	if (!cin) error("Bad input for \"guess\"");
-	check_input(str);
-        int bulls = 0, cows = 0;
-        bulls = get_bulls(str, secret);
-        cows = get_cows(str, secret) - bulls;
-        while (bulls != size) {
-            cout << "Bulls: " << bulls << " Cows: " << cows << '\n';
-            cout << "Enter your guess: ";
-            cin >> str;
-            if (!cin) error("Bad input for \"guess\"");
-            check_input(str);
-            bulls = get_bulls(str, secret);
-            cows = get_cows(str, secret) - bulls;
-        }
-        cout << "You win!\n";
-	cout << "Your guess: " << str << '\n';
-	cout << "Secret: ";
-        for (auto d : secret) cout << d;
-	cout << '\n';
+try {
+    int seed;
+    cout << "\"Bulls and Cows\" Game!\n"
+            "Please enter a integer \"seed\" to generate game randomness: \n";
+    cin >> seed;
+    if (!cin)
+        error("Bad input for \"seed\"");
+    seed_randint(seed);
+
+    // generate secret
+    vector<char> secret;
+    secret.push_back(randint('a', 'z')); // alphabet ascii
+    constexpr int size = 4;
+    for (int i = 0; i < size - 1; ++i) {
+        int letter = randint('a', 'z');
+        while (in_vector(letter, secret))
+            letter = randint('a', 'z');
+        secret.push_back(letter);
     }
-    catch (logic_error &e) {
-        cerr << "Error: " << e.what() << '\n';
+
+    cout << "Enter your guess, a string of " << size << " distinct letters: \n";
+    vector<char> guess = set_string();
+    int bulls = 0, cows = 0;
+    bulls = get_bulls(guess, secret);
+    cows = get_cows(guess, secret) - bulls;
+    while (bulls != size) {
+        cout << "Bulls: " << bulls << " Cows: " << cows << '\n';
+        cout << "Enter your guess: ";
+        guess = set_string();
+        bulls = get_bulls(guess, secret);
+        cows = get_cows(guess, secret) - bulls;
     }
-    catch (runtime_error &e) {
-        cerr << "Error: " << e.what() << '\n';
-        return 1;
-    }
+
+    // print result
+    cout << "You win!\n";
+    cout << "Your guess: ";
+    for (auto l : guess) cout <<  l;
+    cout << "\nSecret: ";
+    for (auto l : secret) cout << l;
+    cout << '\n';
+}
+catch (runtime_error &e) {
+    cerr << "Error: " << e.what() << '\n';
+    return 1;
 }

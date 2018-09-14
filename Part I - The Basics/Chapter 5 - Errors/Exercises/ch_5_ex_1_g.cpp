@@ -1,6 +1,7 @@
 // Copyright (C) 2016 Vinicius Sa
 // Author: Vinicius Sa <viniciusjavs@gmail.com>
 // Timestamp: 22 Dec 2016
+// Chapter 5, Exercise 1, Try this from page 166
 
 /*
   Breaking post-condition in a function of a snippet code
@@ -24,11 +25,9 @@ int area(int length, int width)
 }
 
 int main()
-{
-    try {
-	area(-1,-2); // pre-condition holds, but post-condition doesn't
-    }
-    catch (runtime_error& e) {
-	cerr << e.what() << '\n';
-    }
+try {
+    area(-1,-2); // pre-condition holds, but post-condition doesn't
+}
+catch (runtime_error& e) {
+    cerr << e.what() << '\n';
 }
