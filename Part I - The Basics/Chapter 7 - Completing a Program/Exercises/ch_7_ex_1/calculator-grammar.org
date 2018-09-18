@@ -1,0 +1,38 @@
+* A simple expression grammar:
+  The calculator grammar used in the exercise 1 from chapter 7.
+  Originally written by Bjarne Stroustrup (bs@cs.tamu.edu) Spring 2004.
++ Calculation
+  - Statement 
+  - Print
+  - Quit
+  - Calculation Statement
++ Statement
+  - Declaration
+  - Expression
++ Declaration
+  - "let" Assignment
++ Print
+  - ;
++ Quit
+  - q 
++ Expression
+  - Term
+  - Expression "+" Term	// Addition
+  - Expression "-" Term	// Subtraction
++ Term
+  - Primary
+  - Term "*" Primary	// Multiplication
+  - Term "\/" Primary	// Division
+  - Term "%" Primary	// Modulo
++ Assignment
+  - Name "=" Expression	// Is assignment an expression? :) 
++ Name
+  - String "="		// Id
+  - Primary		// Dereference
++ Primary:
+  - Number
+  - "(" Expression ")"	// Grouping
+  - "-" Primary
+  - "+" Primary
++ Number:
+  - floating-point-literal

@@ -1,15 +1,13 @@
-// Timestamp: 17 Jan 2017
-// Chapter 6, Exercise 9
-
-// A simple grammar for cardinal numbers
-
-Thousand:
-	DigitHundred
-Hundred:
-	DigitTen
-Ten:
-	DigitOne
-One:
-	Digit
-Digit:
-	char literal ['0'-'0'..'9'-'0']
+* A simple grammar for cardinal numbers
+  Timestamp: 17 Jan 2017
+  Chapter 6, Exercise 9
+  + Thousand
+    - Digit + Hundred
+  + Hundred
+    - Digit + Ten
+  + Ten
+    - Digit + One
+  + One
+    - Digit
+  + Digit
+    - Literal char ['0'-'0'..'9'-'0']

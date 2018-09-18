@@ -1,21 +1,17 @@
-// Timestamp: 17 Jan 2017
-// Chapter 6, Exercise 7
-
-// A simple grammar for bitwise logical expressions
-
-Expression
-	Term
-Term
-	Unary
-	Term & Unary // and
-	Term ^ Unary // exclusive or
-	Term | Unary // or
-Unary:
-	Primary
-	! Primary // not
-	~ Primary // complement
-Primary:
-	Number
-	"(" Expression ")" // grouping
-Number:
-	integer literal
+* A simple grammar for bitwise logical expressions
+  Timestamp: 18 Set 2018
+  Chapter 6, Exercise 7
+  + Expression
+    - Unary
+    - Expression & Unary		# and
+    - Expression ^ Unary		# exclusive or, a.k.a xor
+    - Expression | Unary		# or
+  + Unary
+    - Primary
+    - ! Primary				# not
+    - ~ Primary				# complement
+  + Primary
+    - Number
+    - "(" Expression ")"		# grouping
+  + Number
+    - Literal integer

@@ -1,5 +1,7 @@
 * English Grammar
-  Chapter 6, Exercise 5.
+  Chapter 6, Exercise 6.
++ End:
+  Sentence "."				// e.g., The birds fly .
 + Sentence:
   - Noun Verb				// e.g., Birds fly
   - Article Noun Verb			// e.g., The C++ rules

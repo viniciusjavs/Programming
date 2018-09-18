@@ -1,0 +1,20 @@
+* A simple expression grammar:
+  The calculator grammar used in the exercise 3 from chapter 6.
+
++ Expression:
+  - Term
+  - Expression "+" Term	// Addition
+  - Expression "-" Term	// Subtraction
++ Term:
+  - Unary
+  - Term "*" Unary	// Multiplication
+  - Term "\/" Unary	// Division
++ Unary:
+  - Primary
+  - Primary "!"		// Factorial
++ Primary:
+  - Number
+  - "(" Expression ")"	// Grouping
+  - "{" Expression "}"	// Grouping
++ Number:
+  - floating-point-literal

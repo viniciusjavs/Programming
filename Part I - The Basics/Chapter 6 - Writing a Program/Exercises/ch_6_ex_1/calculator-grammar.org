@@ -1,0 +1,16 @@
+* A simple expression grammar:
+  The calculator grammar used in the exercise 1 from chapter 6.
+
++ Expression:
+  - Term
+  - Expression "+" Term	// Addition
+  - Expression "-" Term	// Subtraction
++ Term:
+  - Primary
+  - Term "*" Primary	// Multiplication
+  - Term "\/" Primary	// Division
++ Primary:
+  - Number
+  - "(" Expression ")"	// Grouping
++ Number:
+  - floating-point-literal
