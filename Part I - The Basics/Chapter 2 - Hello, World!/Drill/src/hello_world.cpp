@@ -1,3 +1,6 @@
+// Vinicius Sa
+// July 07, 2016
+
 #include "std_lib_facilities.h"
 
 /*
