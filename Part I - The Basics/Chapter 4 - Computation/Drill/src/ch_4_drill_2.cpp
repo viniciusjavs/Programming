@@ -1,15 +1,15 @@
 //Copyright 2016 Vinicius Sa (viniciusjavs@gmail.com)
-//Chapter 4, Drill 4
+//Chapter 4, Drill 2
 /*
- * Program that reads two doubles continously into a while-loop
- * and prints the smaller and larger values, or if they are equals.
+ * Program that reads two ints continously into a while-loop
+ * and prints the smaller and larger values.
  * Entering '|' exits the program.
 */
-#include "../../../include/std_lib_facilities.h"
+#include "std_lib_facilities.h"
 
 int main()
 {
-  double a, b;
+  int a, b;
   while (cin >> a >> b) {
     if (a > b) {
       cout << "the smaller value is: " << b << '\n';
@@ -19,8 +19,6 @@ int main()
       cout << "the smaller value is: " << a << '\n';
       cout << "the larger value is: " << b << '\n';
     }
-    else
-      cout << "the numbers are equals" << '\n';
   }
   
 }

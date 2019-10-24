@@ -1,14 +1,14 @@
 //Copyright 2016 Vinicius Sa (viniciusjavs@gmail.com)
-//Chapter 4, Drill 10
+//Chapter 4, Drill 11
 /*
  * Program that reads one double continously into a while-loop
  * followed by a proper unit, that are "cm", "m", "in" or "ft".
  * Values with no unit or units other than the above will be rejected.
  * Then prints the smallest, largest, the number of values, the sum of them
- * and the values, storaged in a vector.
+ * and the values, storaged in a vector, sorted in increasing order.
  * Entering "EOF" exits the program.
 */
-#include "../../../include/std_lib_facilities.h"
+#include "std_lib_facilities.h"
 
 int main()
 {
@@ -48,6 +48,7 @@ int main()
        << "Smallest value: " << smallest << "m\n"
        << "Largest value: " << largest << "m\n"
        << "Values: ";
+  sort(values); //increasing order
   for(double value : values)
     cout << value << ' ';
   cout << '\n';

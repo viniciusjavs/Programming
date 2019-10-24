@@ -6,7 +6,7 @@
  * Then prints the values followed by 'smallest/largest so for' where applicable.
  * Entering '|' exits the program.
 */
-#include "../../../include/std_lib_facilities.h"
+#include "std_lib_facilities.h"
 
 int main()
 {

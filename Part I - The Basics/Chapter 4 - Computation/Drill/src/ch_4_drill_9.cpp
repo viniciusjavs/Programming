@@ -7,7 +7,7 @@
  * Then prints the smallest, largest, the number of values and the sum of them.
  * Entering "EOF" exits the program.
 */
-#include "../../../include/std_lib_facilities.h"
+#include "std_lib_facilities.h"
 
 int main()
 {

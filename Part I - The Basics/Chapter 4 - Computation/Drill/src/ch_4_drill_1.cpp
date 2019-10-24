@@ -4,7 +4,7 @@
  * Program that reads two ints continously into a while-loop
  * and prints them. Entering '|' exits the program.
 */
-#include "../../../include/std_lib_facilities.h"
+#include "std_lib_facilities.h"
 
 int main()
 {
