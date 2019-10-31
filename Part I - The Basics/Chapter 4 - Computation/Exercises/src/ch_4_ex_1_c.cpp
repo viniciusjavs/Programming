@@ -1,17 +1,22 @@
-//Copyright 2016 Vinicius Sa (viniciusjavs@gmail.com)
-//Chapter 4, Exercise 1, Try This - pag. 113
+// Copyright (C) 2016 Vjavs
+// Author: Vinicius Sa (viniciusjavs@gmail.com)
+// Timestamp: Sept. 9
+// Chapter 4, Exercise 1
+// Try This - pag. 111
+
 /*
- * Program that writes a table of characters with
- * their correspoding integers values, including
- * uppercase letters and digits.
+  Program that writes a table of characters with
+  their corresponding integers values.
 */
+
 #include "std_lib_facilities.h"
+
 int main()
 {
-  for (int i {0}; i < 26; ++i) //print out lowercase a-z
-    cout << char('a' + i) << '\t' << 'a' + i << '\n';
-  for (int i {0}; i < 26; ++i) //print out uppercase A-Z
-    cout << char('A' + i) << '\t' << 'A' + i << '\n';
-  for (int i {0}; i < 10; ++i) //print out digits 0-9
-    cout << char('0' + i) << '\t' << '0' + i << '\n';
+    int i{0};
+
+    while (i < 26) {
+        cout << char('a' + i) << '\t' << 'a' + i << '\n';
+        ++i;
+    }
 }

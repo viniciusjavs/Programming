@@ -1,31 +1,30 @@
-//Copyright 2016 Vinicius Sa (viniciusjavs@gmail.com)
-//Chapter 4, Exercise 1, Try This - pag. 125
+// Copyright (C) 2016 Vjavs
+// Author: Vinicius Sa (viniciusjavs@gmail.com)
+// Timestamp: Sept. 12
+// Chapter 4, Exercise 1
+// Try This - pag. 116
+
 /*
- * Program that reads in words and print them on cout
- * and then "bleeps" out words that are undesirable.
+  C++ implementation of the first program ever to run
+  on a stored-program computer (the EDSAC), written by
+  David Wheeler - 1949, that calculates and prints a
+  simple list of squares.
 */
+
 #include "std_lib_facilities.h"
 
-//function declarations
-bool is_word_listed(string word, vector<string> list);
+// function declaration
+int square(int x);
 
+// calculate and print a table of squares 0-99
 int main()
 {
-  vector<string> word_list;
-  vector<string> black_list = {"Broccoli", "Tomato", "Onion"};
-  for (string word; cin >> word;) // read words
-    word_list.push_back(word);
-  for (string word : word_list) // print words, checking undesired them
-    if ( is_word_listed(word, black_list) )
-      cout << "BLEEP" << '\n';
-    else
-      cout << word << '\n';
+    for (int i = 0; i < 100; ++i) cout << i << '\t' << square(i) << '\n';
 }
 
-bool is_word_listed(string word, vector<string> list)
+int square(int x)
 {
-  for (string listed_word : list)
-    if (listed_word == word)
-      return true;
-  return false;
+    int acc = 0;
+    for (int i = 0; i < x; ++i) acc += x;
+    return acc;
 }

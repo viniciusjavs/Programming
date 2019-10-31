@@ -1,26 +1,23 @@
-//Copyright 2016 Vinicius Sa (viniciusjavs@gmail.com)
-//Chapter 4, Exercise 1, Try This - pag. 116
+// Copyright (C) 2016 Vjavs
+// Author: Vinicius Sa (viniciusjavs@gmail.com)
+// Timestamp: Sept. 12
+// Chapter 4, Exercise 1
+// Try This - pag. 113
+
 /*
- * C++ implementation of the first program ever to run
- * on a stored-program computer (the EDSAC) written by
- * David Wheeler - 1949, that calculate and print a
- * simple list of squares.
+  Program that writes a table of characters with
+  their correspoding integers values, including
+  uppercase letters and digits.
 */
+
 #include "std_lib_facilities.h"
 
-//function declaration
-int square(int x);
-// calculate and print a table of squares 0-99
 int main()
 {
-  for (int i = 0; i < 100; ++i)
-    cout << i << '\t' << square(i) << '\n';
-}
-
-int square(int x)
-{
-  int acc = 0;
-  for (int i = 0; i < x; ++i) 
-    acc += x;
-  return acc;
+    for (int i{0}; i < 26; ++i) // print out lowercase a-z
+        cout << char('a' + i) << '\t' << 'a' + i << '\n';
+    for (int i{0}; i < 26; ++i) // print out uppercase A-Z
+        cout << char('A' + i) << '\t' << 'A' + i << '\n';
+    for (int i{0}; i < 10; ++i) // print out digits 0-9
+        cout << char('0' + i) << '\t' << '0' + i << '\n';
 }
