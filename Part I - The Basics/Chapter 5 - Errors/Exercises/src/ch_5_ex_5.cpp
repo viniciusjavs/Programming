@@ -1,6 +1,6 @@
-// Copyright (C) 2016 Vinicius Sa
+// Copyright (C) 2016 vjavs
 // Author: Vinicius Sa <viniciusjavs@gmail.com>
-// Timestamp: 22 Dec 2016
+// Timestamp: Dec. 22, 2016
 // Chapter 5, Exercise 5
 
 /*
@@ -23,7 +23,7 @@ double ctok(double c) // converts to Kelvin
 double ktoc(double k) // converts to Celsius
 /*
   input: temperature in Kelvin [0,...)
-  output: temperature in Celsius 
+  output: temperature in Celsius
  */
 {
     if (k < 0) error("Below Absolute Zero");

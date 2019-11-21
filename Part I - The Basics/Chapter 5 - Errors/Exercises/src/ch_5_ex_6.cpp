@@ -1,6 +1,6 @@
-// Copyright (C) 2016 Vinicius Sa
+// Copyright (C) 2016 vjavs
 // Author: Vinicius Sa <viniciusjavs@gmail.com>
-// Timestamp: 22 Dec 2016
+// Timestamp: Dec. 22, 2016
 // Chapter 5, Exercise 6
 
 /*
@@ -15,7 +15,7 @@ double ctof(double c) // converts to Fahrenheit
   output: temperature in Fahrenheit
  */
 {
-    constexpr double ratio = 9.0/5.0;
+    constexpr double ratio = 9.0 / 5.0;
     double f = ratio * c + 32;
     return f;
 }
@@ -23,10 +23,10 @@ double ctof(double c) // converts to Fahrenheit
 double ftoc(double f) // converts to Celsius
 /*
   input:  temperature in Fahrenheit
-  output: temperature in Celsius 
+  output: temperature in Celsius
  */
 {
-    constexpr double ratio = 5.0/9.0;
+    constexpr double ratio = 5.0 / 9.0;
     double c = (f - 32) * ratio;
     return c;
 }

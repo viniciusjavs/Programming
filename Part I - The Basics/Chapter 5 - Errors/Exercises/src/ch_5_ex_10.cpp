@@ -1,6 +1,6 @@
-// Copyright (C) 2016 Vinicius Sa
+// Copyright (C) 2016 vjavs
 // Author: Vinicius Sa <viniciusjavs@gmail.com>
-// Timestamp: 30 Dec 2016
+// Timestamp: Dec. 30, 2016
 // Chapter 5, Exercise 10
 
 /*
@@ -19,14 +19,12 @@ int main()
     double sum = 0;
     cout << "Please enter the number of values you want to sum: " << '\n';
     cin >> n;
-    if (!cin)
-        error("Error: invalid input for 'number of values'");
+    if (!cin) error("Error: invalid input for 'number of values'");
     cout << "Please enter some floating point numbers  (press '|' to stop): "
          << '\n';
     for (double i; cin >> i;) {
         numbers.push_back(i);
-        if (numbers.size() <= n)
-            sum += i;
+        if (numbers.size() <= n) sum += i;
     }
     char eof;
     if (!cin) {
@@ -36,15 +34,12 @@ int main()
             error("Error: invalid input for 'some floating point numbers'");
     }
     cout << "The sum of the first " << n << " numbers ( ";
-    for (auto i : numbers)
-        cout << i << ' ';
+    for (auto i : numbers) cout << i << ' ';
     cout << ") is " << sum << '\n';
-    if (numbers.size() > n)
-        error("Error: you insert so many numbers");
+    if (numbers.size() > n) error("Error: you insert so many numbers");
     for (int i = 0; i < numbers.size() - 1; ++i)
         diffs.push_back(numbers[i] - numbers[i + 1]);
     cout << "The differences between adjacent values are: ( ";
-    for (auto i : diffs)
-        cout << abs(i) << ' ';
+    for (auto i : diffs) cout << abs(i) << ' ';
     cout << ")." << '\n';
 }

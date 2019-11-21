@@ -1,6 +1,6 @@
-// Copyright (C) 2016 Vinicius Sa
+// Copyright (C) 2016 vjavs
 // Author: Vinicius Sa <viniciusjavs@gmail.com>
-// Timestamp: 29 Dez 2016
+// Timestamp: Dec. 29, 2016
 // Chapter 5, Exercise 9
 
 /*
@@ -17,33 +17,28 @@ int main()
     long sum = 0;
     cout << "Please enter the number of values you want to sum: " << '\n';
     cin >> n;
-    if (!cin)
-        error("Error: invalid input for 'number of values'");
+    if (!cin) error("Error: invalid input for 'number of values'");
     cout << "Please enter some integers (press '|' to stop): " << '\n';
     for (int i; cin >> i;) {
         ints.push_back(i);
-        if (ints.size() <= n)
-            sum += i;
+        if (ints.size() <= n) sum += i;
     }
     char eof;
     if (!cin) {
         cin.clear();
         cin >> eof;
-        if (eof != '|')
-            error("Error: invalid input for 'some integers'");
+        if (eof != '|') error("Error: invalid input for 'some integers'");
     }
     try {
         narrow_cast<int>(sum); // check if result can be expressed as an int
     }
     catch (runtime_error &e) {
         cerr << "Error: " << e.what() << '\n';
-	cerr << "The result can't be expressed as an int" << '\n';
-	return 1;
+        cerr << "The result can't be expressed as an int" << '\n';
+        return 1;
     }
     cout << "The sum of the first " << n << " numbers ( ";
-    for (auto i : ints)
-        cout << i << ' ';
+    for (auto i : ints) cout << i << ' ';
     cout << ") is " << sum << '\n';
-    if (ints.size() > n)
-        error("Error: you insert so many numbers");
+    if (ints.size() > n) error("Error: you insert so many numbers");
 }

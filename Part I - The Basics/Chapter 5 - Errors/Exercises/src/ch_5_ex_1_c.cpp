@@ -1,6 +1,6 @@
-// Copyright (C) 2016 Vinicius Sa
+// Copyright (C) 2016 vjvas
 // Author: Vinicius Sa <viniciusjavs@gmail.com>
-// Timestamp: 20 Dez 2016
+// Timestamp: Dec. 20, 2016
 // Chapter 5, Exercise 1, Try this from page 146
 
 /*
@@ -17,7 +17,7 @@ int area(int length, int width) // calculate area of a rectangle
 
 int framed_area(int x, int y) // calculate area within frame
 {
-    return area(x-2,y-2);
+    return area(x - 2, y - 2);
 }
 
 int f(int x = -1, int y = 2, int z = 4)
@@ -35,12 +35,12 @@ int f(int x = -1, int y = 2, int z = 4)
 
 int main()
 {
-    //f();
-    //f(0);
-    //f(1);
-    //f(2);
-    //f(10000);
-    //f(4,-1);
-    //f(4,4);
-    f(4,4,-1);
+    // f();
+    // f(0);
+    // f(1);
+    // f(2);
+    // f(10000);
+    // f(4,-1);
+    // f(4,4);
+    f(4, 4, -1);
 }

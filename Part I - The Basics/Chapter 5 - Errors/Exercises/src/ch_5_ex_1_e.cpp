@@ -1,6 +1,6 @@
-// Copyright (C) 2016 Vinicius Sa
+// Copyright (C) 2016 vjavs
 // Author: Vinicius Sa <viniciusjavs@gmail.com>
-// Timestamp: 21 Dec 2016
+// Timestamp: Dec. 21
 // Chapter 5, Exercise 1, Try this from page 155
 
 /*
@@ -22,12 +22,12 @@ int main()
     double low_temp = 0;
 
     for (int x : temps) {
-	if(x > high_temp) high_temp = x; // find high
-	if(x < low_temp) low_temp = x; // find low
-	sum += x;
+        if (x > high_temp) high_temp = x; // find high
+        if (x < low_temp) low_temp = x;   // find low
+        sum += x;
     }
 
     cout << "High temperature: " << high_temp << '\n'
-	 << "Low temperature: " << low_temp << '\n'
-	 << "Average temperature: " << sum/temps.size() << '\n';
+         << "Low temperature: " << low_temp << '\n'
+         << "Average temperature: " << sum / temps.size() << '\n';
 }

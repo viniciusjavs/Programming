@@ -1,10 +1,10 @@
-// Copyright (C) 2017 Vinicius Sa
+// Copyright (C) 2017 vjvas
 // Author: Vinicius Sa <viniciusjavs@gmail.com>
-// Timestamp: 11 Jan 2017
+// Timestamp: Jan. 11, 2017
 // Chapter 5, Exercise 13
 
 /*
-  Implementation of a little guessing game called "Bulls and Cows"
+  Implementation of a little guessing game called "Bulls and Cows".
   Use "randint()" instead of "fib()"  to generate random numbers
  */
 
@@ -16,8 +16,7 @@ bool in_vector(int digit, vector<int> v)
  */
 {
     for (auto d : v)
-        if (digit == d)
-            return true;
+        if (digit == d) return true;
     return false;
 }
 
@@ -74,8 +73,7 @@ int get_bulls(vector<int> guess, vector<int> secret)
 {
     int bulls = 0;
     for (int i = 0; i < secret.size(); ++i)
-        if (guess[i] == secret[i])
-            ++bulls;
+        if (guess[i] == secret[i]) ++bulls;
     return bulls;
 }
 
@@ -87,8 +85,7 @@ int get_cows(vector<int> guess, vector<int> secret)
     int cows = 0;
     for (int g : guess)
         for (int s : secret)
-            if (g == s)
-                ++cows;
+            if (g == s) ++cows;
     return cows;
 }
 
@@ -111,8 +108,7 @@ try {
         constexpr int size = 4;
         for (int i = 0; i < size - 1; ++i) {
             int digit = randint(max);
-            while (in_vector(digit, secret))
-                digit = randint(max);
+            while (in_vector(digit, secret)) digit = randint(max);
             secret.push_back(digit);
         }
 
@@ -137,13 +133,16 @@ try {
         cout << "\nSecret: ";
         for (auto d : secret) cout << d;
 
-	// play again?
+        // play again?
         cout << "\nWould you like to play again?(y/n)\n";
         cin >> ans;
         if (!cin) error("Bad input for \"ans\"");
-        if (ans == 'n') ans = 0;
-        else if (ans == 'y') ans = 1;
-        else  error("Bad input for \"ans\"");
+        if (ans == 'n')
+            ans = 0;
+        else if (ans == 'y')
+            ans = 1;
+        else
+            error("Bad input for \"ans\"");
     }
 }
 catch (runtime_error &e) {

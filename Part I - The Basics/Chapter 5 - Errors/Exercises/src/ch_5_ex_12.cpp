@@ -1,10 +1,10 @@
-// Copyright (C) 2016 Vinicius Sa
+// Copyright (C) 2016 vjavs
 // Author: Vinicius Sa <viniciusjavs@gmail.com>
-// Timestamp: 31 Dec 2016
+// Timestamp: Dec. 31, 2016
 // Chapter 5, Exercise 12
 
 /*
-  Implementation of a little guessing game called "Bulls and Cows"
+  Implementation of a little guessing game called "Bulls and Cows".
  */
 
 #include "std_lib_facilities.h"
@@ -47,8 +47,7 @@ bool in_vector(int digit, vector<int> v)
  */
 {
     for (auto d : v)
-        if (digit == d)
-            return true;
+        if (digit == d) return true;
     return false;
 }
 
@@ -105,8 +104,7 @@ int get_bulls(vector<int> guess, vector<int> secret)
 {
     int bulls = 0;
     for (int i = 0; i < secret.size(); ++i)
-        if (guess[i] == secret[i])
-            ++bulls;
+        if (guess[i] == secret[i]) ++bulls;
     return bulls;
 }
 
@@ -118,8 +116,7 @@ int get_cows(vector<int> guess, vector<int> secret)
     int cows = 0;
     for (int g : guess)
         for (int s : secret)
-            if (g == s)
-                ++cows;
+            if (g == s) ++cows;
     return cows;
 }
 
@@ -138,8 +135,7 @@ try {
     constexpr int size = 4;
     for (int i = 0; i < size - 1; ++i) {
         int digit = gen_number();
-        while (in_vector(digit, secret))
-            digit = gen_number();
+        while (in_vector(digit, secret)) digit = gen_number();
         secret.push_back(digit);
     }
 

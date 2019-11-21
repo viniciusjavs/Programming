@@ -1,6 +1,6 @@
-// Copyright (C) 2017 Vinicius Sa
+// Copyright (C) 2017 vjavs
 // Author: Vinicius Sa <viniciusjavs@gmail.com>
-// Timestamp: 11 Jan 2017
+// Timestamp: Jan. 11, 2017
 // Chapter 5, Exercise 14
 
 /*

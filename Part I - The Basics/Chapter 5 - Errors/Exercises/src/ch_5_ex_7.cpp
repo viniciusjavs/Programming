@@ -1,10 +1,10 @@
-// Copyright (C) 2016 Vinicius Sa
+// Copyright (C) 2016 vjavs
 // Author: Vinicius Sa <viniciusjavs@gmail.com>
-// Timestamp: 22 Dec 2016
+// Timestamp: Dec. 22, 2016
 // Chapter 5, Exercise 7
 
 /*
-  Program to solve quadratic equation and detect when are no real roots
+  Program to solve quadratic equation and detect when are no real roots.
   Includes ability to check if solution is OK.
  */
 
@@ -20,8 +20,7 @@ bool check_root(double root)
  */
 {
     constexpr double epsilon = numeric_limits<float>::epsilon();
-    if (abs(a * root * root + b * root + c) - 0 > epsilon)
-        return false;
+    if (abs(a * root * root + b * root + c) - 0 > epsilon) return false;
     return true;
 }
 
@@ -30,8 +29,7 @@ void quadratic_equation()
   Function that prints the roots of quadratic equations
  */
 {
-    if (a == 0)
-        error("This function is not quadratic");
+    if (a == 0) error("This function is not quadratic");
     double d = 0;
     if (b == 0) { // means just calculate a sqrt
         d = -c / a;
@@ -54,15 +52,13 @@ void quadratic_equation()
             x2 = (-b - sqrt(d)) / (2 * a);
             cout << "The roots of equation are: " << x1 << " and " << x2
                  << '\n';
-            if (!check_root(x1) || !check_root(x2))
-                error("wrong result!");
+            if (!check_root(x1) || !check_root(x2)) error("wrong result!");
         }
         else if (d < 0)
             error("The function has no real roots");
         else {
             cout << "The root of equation is: " << -b / 2 * a << '\n';
-            if (!check_root(-b / 2 * a))
-                error("wrong result!");
+            if (!check_root(-b / 2 * a)) error("wrong result!");
         }
     }
 }

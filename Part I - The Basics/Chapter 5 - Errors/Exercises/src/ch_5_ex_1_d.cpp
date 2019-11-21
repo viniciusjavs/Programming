@@ -1,6 +1,6 @@
-// Copyright (C) 2016 Vinicius Sa
+// Copyright (C) 2016 vjavs
 // Author: Vinicius Sa <viniciusjavs@gmail.com>
-// Timestamp: 21 Dec 2016
+// Timestamp: Dec. 21
 // Chapter 5, Exercise 1, Try this from page 153
 
 /*

@@ -1,10 +1,10 @@
-// Copyright (C) 2016 Vinicius Sa
+// Copyright (C) 2016 vjavs
 // Author: Vinicius Sa <viniciusjavs@gmail.com>
-// Timestamp: 20 Dez 2016
+// Timestamp: Dec. 20, 2016
 // Chapter 5, Exercise 1, Try this from page 139
 
 /*
-  Trying to compile some errors to see how compiler responds.
+  Trying to compile some errors to see how the compiler responds.
   Adding new kind of errors.
  */
 
