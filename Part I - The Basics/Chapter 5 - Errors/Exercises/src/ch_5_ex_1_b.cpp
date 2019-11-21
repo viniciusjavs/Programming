@@ -18,5 +18,5 @@ int main()
     // int x1 = area(7)           // error: wrong number of arguments
     // int x2 = area("seven", 7); // error: 1st argument has a wrong type
     // string x4 = area(7,7);     // error: wrong return type
-    char x5 = area(7,7);          // error: narrowing conversion
+    char x5 = area(7,7);          // error: linking error
 }

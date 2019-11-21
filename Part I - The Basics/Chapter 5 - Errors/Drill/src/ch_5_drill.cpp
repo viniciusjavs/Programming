@@ -8,7 +8,7 @@
   Total are 25.
 */
 
-#include "../../../include/std_lib_facilities.h"
+#include "std_lib_facilities.h"
 
 int main()
 {
