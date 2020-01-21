@@ -17,7 +17,7 @@
 
 */
 
-#include "../../../include/std_lib_facilities.h"
+#include "std_lib_facilities.h"
 
 //------------------------------------------------------------------------------
 
@@ -176,6 +176,8 @@ double expression()
 int main()
 try
 {
+    cout << "Welcome to our simple calculator.\n"
+	 << "Please enter expressions using floating-point numbers.\n";
     double val = 0;
     while (cin) {
         Token t = ts.get();
