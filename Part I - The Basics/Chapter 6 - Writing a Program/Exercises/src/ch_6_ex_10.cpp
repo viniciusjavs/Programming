@@ -1,6 +1,6 @@
-// Copyright (C) 2017 Vinicius Sa
+// Copyright (C) 2017 vjavs
 // Author: Vinicius Sa <viniciusjavs@gmail.com>
-// Timestamp: 18 Jan 2017
+// Timestamp: Jan. 18, 2017
 // Chapter Six, Exercise 10
 
 /*
@@ -11,25 +11,24 @@
 
 unsigned long factorial(int x)
 {
-    if (x<0) error("Bad input","factorial");
-    if (x == 0)	return 1;
+    if (x < 0) error("Bad input", "factorial");
+    if (x == 0) return 1;
     unsigned long fac = 1;
-    for(unsigned int i = x; i > 1; --i)
-	 narrow_cast<int>(fac*=i);
+    for (unsigned int i = x; i > 1; --i) narrow_cast<int>(fac *= i);
     return fac;
 }
 
 int permutation(int a, int b)
 {
-    if (a<b || a<1 || b<1) // double checks
-	error("Bad input", "permutation");
-    return factorial(a) / factorial(a-b);
+    if (a < b || a < 1 || b < 1) // double checks
+        error("Bad input", "permutation");
+    return factorial(a) / factorial(a - b);
 }
 
 int combination(int a, int b)
 {
-    if (a<b || a<1 || b<1) // double checks
-	error("Bad input", "combination");
+    if (a < b || a < 1 || b < 1) // double checks
+        error("Bad input", "combination");
     return permutation(a, b) / factorial(b);
 }
 
@@ -43,7 +42,7 @@ try {
     char ans;
     cin >> ans;
     if (!cin) error("Bad input", "answer");
-    int res=0;
+    int res = 0;
     switch (ans) {
     case 'p':
         res = permutation(a, b);
@@ -57,8 +56,7 @@ try {
     cout << "Result is: " << res << '\n';
     return 0;
 }
-catch (runtime_error& e) {
+catch (runtime_error &e) {
     cerr << "Error: " << e.what() << '\n';
     return 1;
 }
-

@@ -11,8 +11,7 @@ Token_stream::Token_stream() : full(false), buffer(0) // no Token in buffer
 // buffer:
 void Token_stream::putback(Token t)
 {
-    if (full)
-        error("putback() into a full buffer");
+    if (full) error("putback() into a full buffer");
     buffer = t;  // copy t to buffer
     full = true; // buffer is now full
 }

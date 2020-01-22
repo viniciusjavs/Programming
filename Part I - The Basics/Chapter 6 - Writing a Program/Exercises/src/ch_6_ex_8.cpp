@@ -1,6 +1,6 @@
-// Copyright (C) 2016 Vinicius Sa
+// Copyright (C) 2016 vjavs
 // Author: Vinicius Sa <viniciusjavs@gmail.com>
-// Timestamp: 17 Jan 2016
+// Timestamp: Jan. 17, 2016
 // Chapter 6, Exercise 8
 
 /*
@@ -29,17 +29,17 @@ vector<char> str_to_v(const string str)
     for (auto c : str)
         if (c < 'a' || c > 'z')
             error("Bad input for \"guess\"", " - illegal characters");
-    
+
     int size = 4;
     if (str.size() != size)
         error("Bad input for \"guess\"", " - out of change letters");
-    
+
     vector<char> guess;
     for (auto c : str)
-	if (in_vector(c, guess))
+        if (in_vector(c, guess))
             throw logic_error("Repeated number!");
-	else
-	    guess.push_back(c);
+        else
+            guess.push_back(c);
     return guess;
 }
 
@@ -70,8 +70,7 @@ int get_bulls(const vector<char> guess, const vector<char> secret)
 {
     int bulls = 0;
     for (int i = 0; i < secret.size(); ++i)
-        if (guess[i] == secret[i])
-            ++bulls;
+        if (guess[i] == secret[i]) ++bulls;
     return bulls;
 }
 
@@ -83,8 +82,7 @@ int get_cows(const vector<char> guess, const vector<char> secret)
     int cows = 0;
     for (int g : guess)
         for (int s : secret)
-            if (g == s)
-                ++cows;
+            if (g == s) ++cows;
     return cows;
 }
 
@@ -94,8 +92,7 @@ try {
     cout << "\"Bulls and Cows\" Game!\n"
             "Please enter a integer \"seed\" to generate game randomness: \n";
     cin >> seed;
-    if (!cin)
-        error("Bad input for \"seed\"");
+    if (!cin) error("Bad input for \"seed\"");
     seed_randint(seed);
 
     // generate secret
@@ -104,8 +101,7 @@ try {
     constexpr int size = 4;
     for (int i = 0; i < size - 1; ++i) {
         int letter = randint('a', 'z');
-        while (in_vector(letter, secret))
-            letter = randint('a', 'z');
+        while (in_vector(letter, secret)) letter = randint('a', 'z');
         secret.push_back(letter);
     }
 
@@ -125,7 +121,7 @@ try {
     // print result
     cout << "You win!\n";
     cout << "Your guess: ";
-    for (auto l : guess) cout <<  l;
+    for (auto l : guess) cout << l;
     cout << "\nSecret: ";
     for (auto l : secret) cout << l;
     cout << '\n';

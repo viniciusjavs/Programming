@@ -1,6 +1,6 @@
-// Copyright (C) 2018 Vinicius Sa
+// Copyright (C) 2018 vjavs
 // Author: Vinicius Sa <viniciusjavs@gmail.com>
-// Timestamp: 17 set 2018
+// Timestamp: Sep. 17, 2018
 // Chapter 6, Exercise 1, Thy this from page 216. [Reworked]
 
 /*
@@ -39,7 +39,8 @@ double expression();
 double term();
 double primary();
 
-int main() try {
+int main()
+try {
     double val = 0; // Fifth compile error.
     while (cin) {
         switch (Token t = ts.get(); t.kind) {
@@ -47,7 +48,7 @@ int main() try {
             return 0; // 'q' for quit
         case ';':     // ';' for "print now"
             cout << "=" << val << '\n';
-	    val=0;
+            val = 0;
             break;
         default:
             ts.putback(t);
@@ -102,8 +103,7 @@ double term()
             break; // Second logical error.
         case '/': {
             double d = primary();
-            if (d == 0)
-                error("divide by zero");
+            if (d == 0) error("divide by zero");
             left /= d;
             t = ts.get();
             break;
@@ -124,8 +124,7 @@ double primary()
     {
         double d = expression();
         t = ts.get();
-        if (t.kind != ')')
-            error("')' expected"); // Third compile error.
+        if (t.kind != ')') error("')' expected"); // Third compile error.
         return d;
     }
     case '8':           // we use '8' to represent a number

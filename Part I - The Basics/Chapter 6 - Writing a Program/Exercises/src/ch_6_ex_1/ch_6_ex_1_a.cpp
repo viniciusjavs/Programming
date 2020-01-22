@@ -1,6 +1,6 @@
-// Copyright (C) 2018 Vinicius Sa
+// Copyright (C) 2018 vjavs
 // Author: Vinicius Sa <viniciusjavs@gmail.com>
-// Timestamp: 17 set 2018
+// Timestamp: Sep. 17, 2018
 // Chapter 6, Exercise 1, Try this from page 204. [Reworked]
 
 /*
@@ -54,9 +54,9 @@ Token get_token() // read a token from cin
 
 double expression(); // read and evaluate a Expression
 
-int main() try {
-    while (cin)
-        cout << "= " << expression() << '\n';
+int main()
+try {
+    while (cin) cout << "= " << expression() << '\n';
     keep_window_open("~0");
 }
 catch (exception &e) {
@@ -78,8 +78,7 @@ double primary()
     {
         double d = expression();
         t = get_token();
-        if (t.kind != ')')
-            error("')' expected");
+        if (t.kind != ')') error("')' expected");
         return d;
     }
     case '8':           // we use '8' to represent a number
@@ -102,8 +101,7 @@ double term()
             break;
         case '/': {
             double d = primary();
-            if (d == 0)
-                error("divide by zero");
+            if (d == 0) error("divide by zero");
             left /= d;
             t = get_token();
             break;

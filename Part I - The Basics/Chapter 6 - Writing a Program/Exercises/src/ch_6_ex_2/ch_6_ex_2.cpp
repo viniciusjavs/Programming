@@ -1,6 +1,6 @@
-// Copyright (C) 2018 Vinicius Sa
+// Copyright (C) 2018 vjavs
 // Author: Vinicius Sa <viniciusjavs@gmail.com>
-// Timestamp: 18 set 2018
+// Timestamp: Sep. 18, 2018
 // Chapter 6, Exercise 2. [Reworked]
 
 /*
@@ -40,7 +40,8 @@ double expression();
 double term();
 double primary();
 
-int main() try {
+int main()
+try {
     cout << "Welcome to our simple calculator.\n"
             "Please enter expressions using floating-point numbers.\n"
             "Allowed operators are: +, -, *, / and () or {} for grouping.\n"
@@ -107,8 +108,7 @@ double term()
             break; // Second logical error.
         case '/': {
             double d = primary();
-            if (d == 0)
-                error("divide by zero");
+            if (d == 0) error("divide by zero");
             left /= d;
             t = ts.get();
             break;

@@ -1,6 +1,6 @@
-// Copyright (C) 2018 Vinicius Sa
+// Copyright (C) 2018 vjavs
 // Author: Vinicius Sa <viniciusjavs@gmail.com>
-// Timestamp: 18 set 2018
+// Timestamp: Sep. 18, 2018
 // Chapter 6, Exercise 6. [Reworked]
 
 /*
@@ -59,7 +59,8 @@ bool sentence()
     return false;
 }
 
-int main() try {
+int main()
+try {
     cout << "Enter a sentence based on the \"English\" grammar in §6.4.1,\n"
             "terminated by a space followed by a dot:\n";
     string res = "not OK";

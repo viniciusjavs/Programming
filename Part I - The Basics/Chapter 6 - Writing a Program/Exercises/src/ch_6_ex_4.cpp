@@ -1,6 +1,6 @@
-// Copyright (C) 2017 Vinicius Sa
+// Copyright (C) 2017 vjavs
 // Author: Vinicius Sa <viniciusjavs@gmail.com>
-// Timestamp: 14 Jan 2017
+// Timestamp: Jan. 14, 2017
 // Chapter 6, Exercise 4
 
 /*
@@ -35,8 +35,7 @@ try {
         if (!cin) error("Bad input!");
     }
     if (!has_twice(pairs))
-        for (auto pair : pairs)
-            cout << pair.name << ' ' << pair.score << '\n';
+        for (auto pair : pairs) cout << pair.name << ' ' << pair.score << '\n';
     else
         error("twice words detected!");
     return 0;
@@ -50,7 +49,6 @@ bool has_twice(vector<Name_value> pairs)
 {
     for (unsigned int i = 0; i < pairs.size() - 1; ++i)
         for (unsigned int j = i + 1; j < pairs.size(); ++j)
-            if (pairs[i].name == pairs[j].name)
-                return true;
+            if (pairs[i].name == pairs[j].name) return true;
     return false;
 }
